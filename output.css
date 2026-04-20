@@ -191,13 +191,13 @@
   font-family: "Outfit";
   font-weight: 600;
   font-display: swap;
-  src: url("/fonts/Outfit-Medium.ttf") format("ttf");
+  src: url("fonts/Outfit-Medium.ttf") format("ttf");
 }
 @font-face {
   font-family: "Outfit";
   font-weight: 900;
   font-display: swap;
-  src: url("/fonts/Outfit-ExtraBold.ttf") format("ttf");
+  src: url("fonts/Outfit-ExtraBold.ttf") format("ttf");
 }
 @font-face {
   font-family: "Raleway";

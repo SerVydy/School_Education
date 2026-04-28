@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script src="alpine.js" defer></script>
+</head>
+<body class="bg-orange-50 flex flex-col h-screen font-outfit">
+    <header class="px-2 pt-2 grid gap-y-4">
+        <div class="border-2 py-2 rounded-xl bg-linear-to-r from-orange-200 to-orange-400 flex items-center justify-center gap-x-4">
+            <p class="text-xl">Admission is Open, Grab your seat now <i class="fa fa-arrow-right" aria-hidden="true"></i></p>       
+        </div>
+        <div class="flex w-full items-center">
+            <a href="index.html" class="flex items-center bg-orange-400 py-4 px-2 rounded-l-xl border-l-2 border-y-2">
+                <img src="images/logo.png" alt="" class="h-8">
+                Little Learners
+            </a>
+            <div class="flex-grow border-y-2 h-full"></div>
+            <nav class="flex h-full" x-data="{
+                items: [
+                    { name: 'home', href: 'index.html'},
+                    { name: 'about us', href: 'about.html'},
+                    { name: 'Admissions ', href: 'admissions.html'},
+                    { name: 'Academus ', href: '' },
+                    { name: 'Student Life', href: ''},
+                    { name: 'Contact', href: '' }
+                ]
+            }">
+                <template x-for="(item, index) in items">
+                    
+                    <a 
+                        :href="item.href" 
+                        x-text="item.name.toUpperCase()"
+                        class="flex items-center px-4 border-s-2 border-y-2 h-full hover:bg-orange-200"
+                        :class="index === 5 ? 'rounded-r-xl border-r-2 bg-orange-400' : item.href == window.location.pathname.split('/')[window.location.pathname.split('/').length-1] ? 'bg-orange-200' : '' "
+                        ></a>
+                </template>
+            </nav>
+        </div>
+    </header>
+  <main class="flex-grow container mx-auto py-16 grid gap-y-40">
+        Admission
+ 
+  </main>
+  <footer>
+    footer
+</footer>
+</body>
+</html>
